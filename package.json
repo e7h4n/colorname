@@ -1,6 +1,6 @@
 {
   "name": "colorname",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Get the name of your color.",
   "main": "index.js",
   "scripts": {
