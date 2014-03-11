@@ -18,6 +18,16 @@ $ colorname #82A1B7 #FFFFFF #E7EEF3 #5A5E61
 #5A5E61: ironGray(#625B57)
 ```
 
+Export less format:
+
+```bash
+$ colorname --less #82A1B7 #FFFFFF #E7EEF3 #5A5E61
+@paleBlue: #82A1B7;
+@white: #FFFFFF;
+@lavender: #E7EEF3;
+@ironGray: #5A5E61;
+```
+
 ## License
 
 MIT.

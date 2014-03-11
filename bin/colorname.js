@@ -5,7 +5,9 @@ var variableName = require('variable-name');
 var Color = require('Color');
 
 var optimist = require('optimist')
-    .usage('Usage: $0 [-h/--help] colorString')
+    .usage('Usage: $0 [--help] [--less] colorString')
+    .boolean('l')
+    .alias('l', 'less')
     .alias('h', 'help')
     .describe('h', 'show this help');
 
@@ -19,5 +21,9 @@ var colors = optimist.argv._;
 
 colors.forEach(function (color) {
     var result = colorName.closest(Color(color).rgbArray());
-    console.log('%s: %s(%s)', color, variableName(result.name), Color().rgb(result.rgb).hexString());
+    if (optimist.argv.l) {
+        console.log('@%s: %s;', variableName(result.name), color);
+    } else {
+        console.log('%s: %s(%s)', color, result.name, Color().rgb(result.rgb).hexString());
+    }
 });
