@@ -5,7 +5,7 @@ To get rid of naming hell.
 ## Install
 
 ```bash
-npm install -g color-name
+npm install -g colorname
 ```
 
 ## Usage
