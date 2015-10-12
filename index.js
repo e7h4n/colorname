@@ -1,4 +1,4 @@
-var Color = require('Color');
+var Color = require('color');
 var colors = require('./colors.json');
 var optimist = require('optimist');
 
